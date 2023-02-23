@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import profilePic from "../assets/Profile.jpg";
+const pageTitle = "Home Page";
+---
+<style>
+	body{
+		background-color: #ffffff;
+		background-image: url("assets/BackgroundLight.jpeg");
+	}
+	img{
+		border-radius: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1{
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.8);
+		bac
+	}
+</style>
+<BaseLayout pageTitle = {pageTitle}>
+	<img src={profilePic} alt="Profile Pic" height="200" width="200"/>
+	<h1 >Finn van Montfort</h1>
+	<h2 style="text-align: center;">Student, Runner & aspiring Software Developer</h2>
+	<a href="/portfolio/">Check out my work</a>
+	<br/>
+	<a href="/contact/">Contact me</a>
+</BaseLayout>
