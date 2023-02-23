@@ -1,6 +1,6 @@
 
 html {
-  background-color: white;
+  background-color: #007fff;
   color: black;
   font-family: sans-serif;
 }
@@ -61,29 +61,38 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: blue;
+    color: #007fff;
   }
   
   .nav-links a:hover, a:focus {
-    color: purple;
+    color: #09bdf9;
   }
   
   .expanded {
     display: unset;
   }
   
-  @media screen and (min-width: 636px) {
+  @media screen and (min-width: 650px) {
     .nav-links {
-      margin-left: 5em;
+      margin-bottom: 50px;
+      margin-right: auto;
+      text-align: center;
       display: block;
       position: static;
       width: auto;
-      background: none;
+      background-color: #1f2022;
+      opacity: 0.75;
+      border-radius: 5px;
+      border-bottom: 5px;
+      border-style: none none solid none;
+      border-color: blue;
     }
   
     .nav-links a {
       display: inline-block;
       padding: 15px 20px;
+      justify-content: center;
+      overflow: hidden;
     }
   
     .hamburger {
