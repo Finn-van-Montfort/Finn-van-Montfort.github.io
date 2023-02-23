@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import profilePic from "../assets/Profile.jpg";
+import backgroundLight from "../assets/BackgroundLight.jpeg";
 const pageTitle = "Home Page";
 ---
 <style>
-	body{
+	bbody{
 		background-color: #ffffff;
+		background-image: image(backgroundLight);
 	}
 	img{
 		border-radius: 50%;
@@ -15,8 +17,9 @@ const pageTitle = "Home Page";
 	}
 	h1{
 		text-align: center;
-		background-color: rgba(0, 0, 0, 0.8);
-		bac
+		color: #ffffff;
+		background-color: black;
+		opacity: 0.8;
 	}
 </style>
 <BaseLayout pageTitle = {pageTitle}>
