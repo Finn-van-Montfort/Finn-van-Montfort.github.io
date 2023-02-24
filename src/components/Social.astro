@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+const Links = [
+  { icon: "tabler:brand-linkedin", link: "https://linkedin.com/in/finn-van-montfort-ab13731ab/", label: "Linkedin" },
+  { icon: "tabler:brand-github", link: "https://github.com/TheCheesyWiggle", label: "Github" },
+  { icon: "tabler:mail", link: "mailto:iamatrihegde@outlook.com", label: "Email" },
+];
+const styles = Astro.props;
+---
+
+<div class={styles.class}>
+  {
+    Links.map((item) => {
+      return (
+        <a href={item.link} aria-label={item.label}>
+          <Icon name={item.icon} height="35"/>
+        </a>
+      );
+    })
+  }
+</div>

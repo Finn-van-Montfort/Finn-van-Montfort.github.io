@@ -1,7 +1,14 @@
 ---
+import Social from "../components/Social.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import github from "../assetsgithub-fill.png";
 const pageTitle = "Contact Me";
 ---
 <BaseLayout pageTitle = {pageTitle}>
-    <h1>Contact me</h1>
+    <h1>Contact me:</h1>
+    <ul>
+        <li>
+            <Social/>
+        </li>
+    </ul>
 </BaseLayout>
