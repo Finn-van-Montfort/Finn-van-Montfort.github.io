@@ -5,8 +5,17 @@ import rightArrow from "../assets/rightArrow.png";
 const pageTitle = "Home Page";
 ---
 <style>
-	html {
-		background-color: #323232;
+	*{
+		margin:0;
+		padding:0;
+	}
+	html{
+		background-color: #212121;
+		background-image: url('../assets/BackgroundDark.jpeg');
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	img{
 		border-radius: 50%;
@@ -45,13 +54,7 @@ const pageTitle = "Home Page";
 	}
 
 	@media screen and (min-width: 650px) {
-		html{
-			background-color: #212121;
-			background-image: url('../assets/BackgroundDark.jpeg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
+
 		h1{
 		text-align: center;
 		color: #bababa;
