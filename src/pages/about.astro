@@ -1,8 +1,23 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import AppLayout from "../layouts/AppLayout.astro";
 const pageTitle = "About"
 ---
+<style>
+	.page{
+		background-color: white;
+		margin-top: 10vh;
+		padding: 10vh 10vw 10vh 10vw;
+	}
+	.ruler{
+		
+	}
+</style>
 
-<BaseLayout pageTitle = {pageTitle}>
-	<h1>🚧 Under Consrtuction 🚧</h1>
-</BaseLayout>
+<AppLayout pageTitle = {pageTitle}>
+	<div class="ruler"></div>
+	<div class="page">
+		<h1>About</h1>
+		<h3>Hi, my name is Finn van Montfort.</h3>
+		<p>Welcome to my about section</p>
+	</div>
+</AppLayout>
