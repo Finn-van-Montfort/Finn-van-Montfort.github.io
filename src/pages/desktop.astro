@@ -1,8 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Taskbar from "../components/Taskbar.astro";
 const pageTitle = "Desktop"
 ---
-
+<style>
+	html{
+		background-image: url('../assets/BackgroundDark.jpeg');
+		background-color: #212121;
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
 <BaseLayout pageTitle = {pageTitle}>
-	<h1>🚧 Under Consrtuction 🚧</h1>
+	<Taskbar/>
 </BaseLayout>
