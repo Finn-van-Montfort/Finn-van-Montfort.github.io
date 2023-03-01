@@ -2,11 +2,45 @@
 import profilePic from "../assets/Profile.jpg";
 import rightArrow from "../assets/rightArrow.png";
 ---
+
+<style>
+    img{
+		border-radius: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h1{
+		text-align: center;
+		color: #bababa;
+	}
+	
+	h2{
+		margin: 0%;
+		padding-left: 10px;
+		text-align: left;
+		color: #bababa;
+	}
+    .identity{
+		margin: auto;
+		display: flex;
+		align-items: center;
+		background-color: #212121;
+		opacity: 0.75;
+		border-radius: 5px;
+		border-bottom: 5px;
+		border-style: none none solid none;
+		border-color: blue;
+
+	}
+	.identity img{
+		float: left;
+		margin-right: 10px;
+	}
+</style>
 <identity>
     <img src={profilePic} alt="Profile Pic" height="200" width="200"/>
     <h1 >Finn van Montfort</h1>
     <div class="identity"><h2>Student, Runner & aspiring Software Developer</h2><img src={rightArrow} alt="right arrow" height="20" width="20"/></div>
-    <a href="/portfolio/">Check out my work</a>
-    <br/>
-    <a href="/contact/">Contact me</a>
 </identity>
