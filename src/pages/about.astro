@@ -1,6 +1,7 @@
 ---
 import AppLayout from "../layouts/AppLayout.astro";
 const pageTitle = "About"
+const colour = 'blue'
 ---
 <style>
 	.page{
@@ -29,7 +30,7 @@ const pageTitle = "About"
 	}
 </style>
 
-<AppLayout pageTitle = {pageTitle}>
+<AppLayout pageTitle = {pageTitle,colour}>
 	<div class="ruler"></div>
 	<div class="page">
 		<h1>About</h1>
