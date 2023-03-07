@@ -37,6 +37,16 @@ import rightArrow from "../assets/rightArrow.png";
 		border-color: blue;
 
 	}
+	.identity:hover{
+		border-color: orange;
+		animation-name: border;
+  		animation-duration: 2s;
+	}
+
+	h2:hover{
+		color: white;
+	}
+
 	.identity img{
 		float: left;
 		margin-right: 10px;
@@ -47,6 +57,11 @@ import rightArrow from "../assets/rightArrow.png";
 	identity a{
 		text-decoration: none;
 	}
+
+	@keyframes border {
+  		from {border-color: blue;}
+  		to {border-color: orange;}
+}
 </style>
 <identity>
     <img src={profilePic} alt="Profile Pic" height="200" width="200"/>
