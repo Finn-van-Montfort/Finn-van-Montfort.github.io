@@ -1,6 +1,8 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import AppLayout from "./AppLayout.astro";
+import Slide from "../components/Slide.astro";
 const { frontmatter } = Astro.props;
+const allSlides = await Astro.glob("../pages/slides/*.md")
 ---
 <style>
     a {
@@ -21,16 +23,39 @@ const { frontmatter } = Astro.props;
         font-size: 1.15em;
         background-color: #F8FCFD;
     }
+    .item1 { 
+		flex-grow: 2;
+		background-color: orange;
+		height: 100%;
+	}
+	.item2 { 
+		flex-grow: 8;
+		background-color: black;
+		height: 100%;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 100%;
+	}
   </style>
 
-<BaseLayout pageTitle ={frontmatter.title}>  
-    <p>Written by: <a href={frontmatter.url}>{frontmatter.author}</a></p>  
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-    <p>{frontmatter.description}</p>
-    <div class="tags">
-        {frontmatter.tags.map((tag: unknown) => (
-          <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-        ))}
-    </div>
+<AppLayout pageTitle ={frontmatter.title}>
+    <div class="flex-container">
+		<div class="item1">
+			{allSlides.map((slide) => <Slide url={slide.url} title ={slide.frontmatter.title}/>)}
+		</div>
+		<div class="item2">
+			<p>Written by: <a href={frontmatter.url}>{frontmatter.author}</a></p>  
+            <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+            <p><em>{frontmatter.description}</em></p>
+            <div class="tags">
+                {frontmatter.tags.map((tag: unknown) => (
+                <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+                ))}
+            </div>
+		</div>
+	</div>  
     <slot />
-</BaseLayout>
+</AppLayout>
