@@ -1,12 +1,39 @@
 ---
 import Slide from "../components/Slide.astro";
 import AppLayout from "../layouts/AppLayout.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
+const allSlides = await Astro.glob("../pages/slides/*.md")
 const pageTitle = "Portfolio page"
 ---
 
+<style>
+	.item1 { 
+		flex-grow: 2;
+		background-color: orange;
+		height: 100%;
+	}
+	.item2 { 
+		flex-grow: 8;
+		background-color: black;
+		height: 100%;
+	}
+	.flex-container{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 100%;
+	}
+</style>
+
 <AppLayout pageTitle = {pageTitle}>
-	<Slide>
-		
-	</Slide>
+	<div class="flex-container">
+
+	
+		<div class="item1">
+			{allSlides.map((slide) => <Slide url={slide.url} title ={slide.frontmatter.title}/>)}
+		</div>
+		<div class="item2">
+			slide container
+		</div>
+	</div>
+	
 </AppLayout>
