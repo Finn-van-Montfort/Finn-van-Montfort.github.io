@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon";
+const Links = [
+  { icon: "vscode-icons:file-type-word", link: "/about", label: "About" },
+  { icon: "vscode-icons:file-type-excel", link: "/tags", label: "Tags" },
+  { icon: "vscode-icons:file-type-outlook", link: "/contact", label: "Contact Me" },
+  { icon: "vscode-icons:file-type-powerpoint", link: "/portfolio", label: "Portfolio" },
+];
+const styles = Astro.props;
+---
+<style>
+    :root{
+        --size: 50px; 
+    }
+    #container{
+        margin-top: 10px;
+    }
+    #icon{
+        height: var(--size);
+        width: var(--size);
+        margin: 10px;
+    }
+    #text{
+        color: white;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+</style>
+<div id="container" class={styles.class}>
+    {
+      Links.map((item) => {
+        return (
+          <a href={item.link} aria-label={item.label} id="icon">
+            <Icon name={item.icon} height="35"/>
+          </a>
+          <p id="text">{item.label}</p>
+        );
+      })
+    }
+</div>
