@@ -1,7 +1,7 @@
 ---
 import AppLayout from "../layouts/AppLayout.astro";
+import Taskbar from "../components/Taskbar.astro";
 const pageTitle = "About"
-const colour = 'blue'
 ---
 <style>
 	.page{
@@ -30,7 +30,7 @@ const colour = 'blue'
 	}
 </style>
 
-<AppLayout pageTitle = {pageTitle,colour}>
+<AppLayout pageTitle = {pageTitle}>
 	<div class="ruler"></div>
 	<div class="page">
 		<h1>About</h1>
@@ -40,4 +40,5 @@ const colour = 'blue'
 			Feel free to contact me or check out my work.
 		</p>
 	</div>
+	<Taskbar/>
 </AppLayout>

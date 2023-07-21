@@ -1,5 +1,5 @@
 ---
-const {colour} = Astro.props;
+
 ---
 <style>
     nav{
@@ -21,25 +21,19 @@ const {colour} = Astro.props;
         padding: 14px 16px;
         text-decoration: none;
     }
-    li a:hover {
-        background-color: #111;
+    li:hover {
+        background-color: darkblue;
     }
 </style>
 
 <nav>
     <ul>
-        <li>File</li>
         <li>Home</li>
-        <li>Insert</li>
-        <li>Draw</li>
-        <li>Design</li>
-        <li>Layout</li>
-        <li>References</li>
-        <li>Mailings</li>
-        <li>Review</li>
-        <li>View</li>
-        <li>Help</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Portfolio</li>
     </ul>
+    <!--
     <div>
         <ul>
             <li>Undo</li>
@@ -54,4 +48,5 @@ const {colour} = Astro.props;
             <li>Reuse files</li>
         </ul>
     </div>
+-->
 </nav>

@@ -1,18 +1,22 @@
 ---
 import Slide from "../components/Slide.astro";
 import AppLayout from "../layouts/AppLayout.astro";
+import Taskbar from "../components/Taskbar.astro";
 const allSlides = await Astro.glob("../pages/slides/*.md")
 const pageTitle = "Portfolio page"
 ---
 
 <style>
+	ul{
+		background-color: orange;
+	}
 	.item1 { 
-		flex-grow: 2;
+		flex-grow: 1;
 		background-color: orange;
 		height: 100%;
 	}
 	.item2 { 
-		flex-grow: 8;
+		flex-grow: 9;
 		background-color: black;
 		height: 100%;
 	}
@@ -35,5 +39,5 @@ const pageTitle = "Portfolio page"
 			slide container
 		</div>
 	</div>
-	
+	<Taskbar/>
 </AppLayout>
