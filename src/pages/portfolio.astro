@@ -1,5 +1,5 @@
 ---
-import Slide from "../components/Slide.astro";
+import Slide from "../components/MiniSlide.astro";
 import AppLayout from "../layouts/AppLayout.astro";
 import Taskbar from "../components/Taskbar.astro";
 const allSlides = await Astro.glob("../pages/slides/*.md")
@@ -7,6 +7,10 @@ const pageTitle = "Portfolio page"
 ---
 
 <style>
+	html, body {
+		height: 100%;
+		margin: 0;
+	}
 	ul{
 		background-color: orange;
 	}
@@ -17,7 +21,7 @@ const pageTitle = "Portfolio page"
 	}
 	.item2 { 
 		flex-grow: 9;
-		background-color: black;
+		background-color: grey;
 		height: 100%;
 	}
 	.flex-container{
@@ -36,7 +40,7 @@ const pageTitle = "Portfolio page"
 			{allSlides.map((slide) => <Slide url={slide.url} title ={slide.frontmatter.title}/>)}
 		</div>
 		<div class="item2">
-			slide container
+			selected slide
 		</div>
 	</div>
 	<Taskbar/>
